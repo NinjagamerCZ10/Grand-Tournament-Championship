@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Tournament Championship | GTA 5 Online</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader-content">
+            <div class="gta-logo">GTC</div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+            <p>Načítání turnaje...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fas fa-trophy"></i></span>
+                <span class="logo-text">GTC</span>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active"><i class="fas fa-home"></i> Domů</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle"><i class="fas fa-flag-checkered"></i> Cupy <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="racing-cup.html"><i class="fas fa-car"></i> Racing Cup</a></li>
+                        <li><a href="combat-cup.html"><i class="fas fa-crosshairs"></i> Combat Cup</a></li>
+                        <li><a href="skill-cup.html"><i class="fas fa-star"></i> Skill Cup</a></li>
+                    </ul>
+                </li>
+                <li><a href="finale.html"><i class="fas fa-crown"></i> Finále</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> O turnaji</a></li>
+                <li><a href="profile.html"><i class="fas fa-user"></i> Hráči</a></li>
+            </ul>
+            
+            <div class="nav-platform">
+                <span class="platform-badge">
+                    <i class="fab fa-playstation"></i> PS4/PS5
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-particles" id="particles"></div>
+        <div class="hero-content">
+            <div class="hero-badge">GTA 5 ONLINE TOURNAMENT</div>
+            <h1 class="hero-title">
+                <span class="title-line">GRAND</span>
+                <span class="title-line accent">TOURNAMENT</span>
+                <span class="title-line">CHAMPIONSHIP</span>
+            </h1>
+            <p class="hero-subtitle">Připrav se na ultimátní výzvu v Los Santos!</p>
+            
+            <div class="hero-stats">
+                <div class="stat-box">
+                    <span class="stat-number" id="totalPlayers">0</span>
+                    <span class="stat-label">Hráčů</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">Cupy</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">$13M+</span>
+                    <span class="stat-label">Výhry</span>
+                </div>
+            </div>
+            
+            <div class="hero-buttons">
+                <a href="#standings" class="btn btn-primary">
+                    <i class="fas fa-trophy"></i> Zobrazit výsledky
+                </a>
+                <a href="about.html" class="btn btn-secondary">
+                    <i class="fas fa-info-circle"></i> Více informací
+                </a>
+            </div>
+        </div>
+        
+        <div class="hero-scroll">
+            <a href="#standings">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Tournament Status -->
+    <section class="tournament-status">
+        <div class="container">
+            <div class="status-card" id="tournamentStatus">
+                <div class="status-indicator active"></div>
+                <div class="status-info">
+                    <h3>Stav turnaje</h3>
+                    <p id="statusText">Turnaj probíhá</p>
+                </div>
+                <div class="status-week">
+                    <span>Týden</span>
+                    <strong id="currentWeek">1</strong>
+                </div>
+                <div class="status-day">
+                    <span>Další cup</span>
+                    <strong id="nextCup">Racing Cup</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Standings -->
+    <section class="standings-section" id="standings">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-medal"></i>
+                    Celková tabulka
+                </h2>
+                <p class="section-subtitle">Aktuální pořadí všech hráčů v turnaji</p>
+            </div>
+            
+            <!-- Top 3 Podium -->
+            <div class="podium-section">
+                <div class="podium">
+                    <div class="podium-place second" id="podium2">
+                        <div class="podium-avatar">
+                            <img src="https://i.imgur.com/8Km9tLL.png" alt="2nd">
+                        </div>
+                        <div class="podium-info">
+                            <span class="podium-name">---</span>
+                            <span class="podium-points">0 bodů</span>
+                        </div>
+                        <div class="podium-stand">
+                            <span class="podium-rank">2</span>
+                        </div>
+                    </div>
+                    
+                    <div class="podium-place first" id="podium1">
+                        <div class="podium-crown"><i class="fas fa-crown"></i></div>
+                        <div class="podium-avatar">
+                            <img src="https://i.imgur.com/8Km9tLL.png" alt="1st">
+                        </div>
+                        <div class="podium-info">
+                            <span class="podium-name">---</span>
+                            <span class="podium-points">0 bodů</span>
+                        </div>
+                        <div class="podium-stand">
+                            <span class="podium-rank">1</span>
+                        </div>
+                    </div>
+                    
+                    <div class="podium-place third" id="podium3">
+                        <div class="podium-avatar">
+                            <img src="https://i.imgur.com/8Km9tLL.png" alt="3rd">
+                        </div>
+                        <div class="podium-info">
+                            <span class="podium-name">---</span>
+                            <span class="podium-points">0 bodů</span>
+                        </div>
+                        <div class="podium-stand">
+                            <span class="podium-rank">3</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Full Standings Table -->
+            <div class="standings-table-wrapper">
+                <table class="standings-table" id="mainStandings">
+                    <thead>
+                        <tr>
+                            <th class="rank-col">#</th>
+                            <th class="player-col">Hráč</th>
+                            <th class="cup-col"><i class="fas fa-car"></i> Racing</th>
+                            <th class="cup-col"><i class="fas fa-crosshairs"></i> Combat</th>
+                            <th class="cup-col"><i class="fas fa-star"></i> Skill</th>
+                            <th class="total-col">Celkem</th>
+                        </tr>
+                    </thead>
+                    <tbody id="standingsBody">
+                        <!-- Data loaded via JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cups Overview -->
+    <section class="cups-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-gamepad"></i>
+                    Turnajové Cupy
+                </h2>
+                <p class="section-subtitle">Tři různé disciplíny, jedna cesta k vítězství</p>
+            </div>
+            
+            <div class="cups-grid">
+                <!-- Racing Cup -->
+                <div class="cup-card racing">
+                    <div class="cup-card-bg"></div>
+                    <div class="cup-card-content">
+                        <div class="cup-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3 class="cup-name">Racing Cup</h3>
+                        <p class="cup-description">Rychlost je tvůj nejlepší přítel</p>
+                        <ul class="cup-modes">
+                            <li><i class="fas fa-mountain"></i> Offroad</li>
+                            <li><i class="fas fa-road"></i> Stunt</li>
+                            <li><i class="fas fa-flag-checkered"></i> Formule</li>
+                            <li><i class="fas fa-map"></i> Rallye</li>
+                        </ul>
+                        <div class="cup-prize">
+                            <span class="prize-label">Výhra Top 3</span>
+                            <span class="prize-amount">$2,600,000</span>
+                        </div>
+                        <a href="racing-cup.html" class="cup-btn">
+                            Zobrazit výsledky <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Combat Cup -->
+                <div class="cup-card combat">
+                    <div class="cup-card-bg"></div>
+                    <div class="cup-card-content">
+                        <div class="cup-icon">
+                            <i class="fas fa-crosshairs"></i>
+                        </div>
+                        <h3 class="cup-name">Combat Cup</h3>
+                        <p class="cup-description">Přežije jen ten nejsilnější</p>
+                        <ul class="cup-modes">
+                            <li><i class="fas fa-users"></i> Team Deathmatch</li>
+                            <li><i class="fas fa-skull"></i> Deathmatch</li>
+                        </ul>
+                        <div class="cup-prize">
+                            <span class="prize-label">Výhra Top 3</span>
+                            <span class="prize-amount">$2,600,000</span>
+                        </div>
+                        <a href="combat-cup.html" class="cup-btn">
+                            Zobrazit výsledky <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Skill Cup -->
+                <div class="cup-card skill">
+                    <div class="cup-card-bg"></div>
+                    <div class="cup-card-content">
+                        <div class="cup-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3 class="cup-name">Skill Cup</h3>
+                        <p class="cup-description">Ukaž své dovednosti</p>
+                        <ul class="cup-modes">
+                            <li><i class="fas fa-fist-raised"></i> Face to Face</li>
+                            <li><i class="fas fa-rocket"></i> RPG vs Cars</li>
+                        </ul>
+                        <div class="cup-prize">
+                            <span class="prize-label">Výhra Top 3</span>
+                            <span class="prize-amount">$2,600,000</span>
+                        </div>
+                        <a href="skill-cup.html" class="cup-btn">
+                            Zobrazit výsledky <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Finale Teaser -->
+    <section class="finale-teaser">
+        <div class="finale-bg"></div>
+        <div class="container">
+            <div class="finale-content">
+                <div class="finale-badge">VELKÉ FINÁLE</div>
+                <h2 class="finale-title">Celkové vyhlášení</h2>
+                <p class="finale-description">
+                    Na konci každého týdne proběhne velké vyhlášení celkových výsledků. 
+                    Top 3 hráči získají exkluzivní odměnu!
+                </p>
+                <div class="finale-prize">
+                    <div class="prize-icon"><i class="fas fa-gem"></i></div>
+                    <div class="prize-info">
+                        <span class="prize-label">Výhra pro Top 3</span>
+                        <span class="prize-amount">$5,200,000</span>
+                        <span class="prize-note">Každý z Top 3</span>
+                    </div>
+                </div>
+                <a href="finale.html" class="btn btn-gold">
+                    <i class="fas fa-crown"></i> Přejít na finále
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="info-section">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon"><i class="fab fa-playstation"></i></div>
+                    <h3>Platforma</h3>
+                    <p>PlayStation 4/5 (PS4 verze hry)</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-users"></i></div>
+                    <h3>Hráči</h3>
+                    <p>Maximálně 30 účastníků</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-calendar-week"></i></div>
+                    <h3>Harmonogram</h3>
+                    <p>Každý den jiný Cup</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-money-bill-wave"></i></div>
+                    <h3>Celkové výhry</h3>
+                    <p>Více než $13,000,000</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-bg"></div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-trophy"></i>
+                        <span>GTC</span>
+                    </div>
+                    <p>Grand Tournament Championship</p>
+                    <p class="footer-game">GTA 5 Online | PS4/PS5</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Navigace</h4>
+                    <ul>
+                        <li><a href="index.html">Domů</a></li>
+                        <li><a href="racing-cup.html">Racing Cup</a></li>
+                        <li><a href="combat-cup.html">Combat Cup</a></li>
+                        <li><a href="skill-cup.html">Skill Cup</a></li>
+                        <li><a href="finale.html">Finále</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Informace</h4>
+                    <ul>
+                        <li><a href="about.html">O turnaji</a></li>
+                        <li><a href="profile.html">Hráči</a></li>
+                        <li><a href="about.html#rules">Pravidla</a></li>
+                        <li><a href="about.html#prizes">Výhry</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social">
+                    <h4>Výsledky</h4>
+                    <p>Hostováno na GitHub Pages</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Grand Tournament Championship. Neoficiální turnaj GTA 5 Online.</p>
+                <p class="disclaimer">Tento web není spojen s Rockstar Games.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
