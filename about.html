@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O turnaji | Grand Tournament Championship</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="about-page">
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fas fa-trophy"></i></span>
+                <span class="logo-text">GTC</span>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html"><i class="fas fa-home"></i> Domů</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle"><i class="fas fa-flag-checkered"></i> Cupy <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="racing-cup.html"><i class="fas fa-car"></i> Racing Cup</a></li>
+                        <li><a href="combat-cup.html"><i class="fas fa-crosshairs"></i> Combat Cup</a></li>
+                        <li><a href="skill-cup.html"><i class="fas fa-star"></i> Skill Cup</a></li>
+                    </ul>
+                </li>
+                <li><a href="finale.html"><i class="fas fa-crown"></i> Finále</a></li>
+                <li><a href="about.html" class="active"><i class="fas fa-info-circle"></i> O turnaji</a></li>
+                <li><a href="profile.html"><i class="fas fa-user"></i> Hráči</a></li>
+            </ul>
+            
+            <div class="nav-platform">
+                <span class="platform-badge">
+                    <i class="fab fa-playstation"></i> PS4/PS5
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Hero -->
+    <header class="about-hero">
+        <div class="about-hero-overlay"></div>
+        <div class="about-hero-content">
+            <h1 class="about-title">O turnaji</h1>
+            <p class="about-subtitle">Vše co potřebuješ vědět o Grand Tournament Championship</p>
+        </div>
+    </header>
+
+    <!-- Main Info -->
+    <section class="about-main">
+        <div class="container">
+            <div class="about-intro">
+                <div class="intro-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h2>Grand Tournament Championship</h2>
+                <p>
+                    Vítej v ultimátním GTA 5 Online turnaji pro PlayStation hráče! 
+                    Každý týden pořádáme sérii soutěží ve třech různých disciplínách, 
+                    kde můžeš ukázat své dovednosti a vyhrát miliony GTA dolarů.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Info -->
+    <section class="platform-section">
+        <div class="container">
+            <div class="platform-card">
+                <div class="platform-icon">
+                    <i class="fab fa-playstation"></i>
+                </div>
+                <div class="platform-info">
+                    <h3>Platforma</h3>
+                    <p class="platform-name">PlayStation 4 / PlayStation 5</p>
+                    <p class="platform-note">PS4 verze hry Grand Theft Auto V Online</p>
+                </div>
+                <div class="platform-players">
+                    <span class="players-count">30</span>
+                    <span class="players-label">Max hráčů</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-cogs"></i>
+                    Jak to funguje
+                </h2>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-icon"><i class="fas fa-calendar-week"></i></div>
+                    <h3>Týdenní cyklus</h3>
+                    <p>Každý týden probíhají 3 různé cupy. Každý den se hraje jiná disciplína.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-icon"><i class="fas fa-gamepad"></i></div>
+                    <h3>Sbírej body</h3>
+                    <p>Za každý zápas získáváš body podle umístění. Body se sčítají.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-icon"><i class="fas fa-trophy"></i></div>
+                    <h3>Vyhrávej cupy</h3>
+                    <p>Top 3 hráči každého cupu vyhrávají $2,600,000.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-icon"><i class="fas fa-crown"></i></div>
+                    <h3>Celkové finále</h3>
+                    <p>Na konci týdne se sečtou body. Top 3 celkově získají $5,200,000.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cups Detail -->
+    <section class="cups-detail" id="cups">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-flag-checkered"></i>
+                    Turnajové disciplíny
+                </h2>
+            </div>
+
+            <div class="cup-detail-grid">
+                <!-- Racing Cup -->
+                <div class="cup-detail-card racing">
+                    <div class="cup-detail-header">
+                        <div class="cup-detail-icon"><i class="fas fa-car"></i></div>
+                        <h3>Racing Cup</h3>
+                    </div>
+                    <div class="cup-detail-content">
+                        <p>Závodní disciplína pro milovníky rychlosti.</p>
+                        <h4>Minihry:</h4>
+                        <ul>
+                            <li><i class="fas fa-mountain"></i> <strong>Offroad</strong> - Terénní závody</li>
+                            <li><i class="fas fa-road"></i> <strong>Stunt</strong> - Akrobatické tratě</li>
+                            <li><i class="fas fa-flag-checkered"></i> <strong>Formule</strong> - Okruhové závody</li>
+                            <li><i class="fas fa-map"></i> <strong>Rallye</strong> - Dlouhé trasy</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Combat Cup -->
+                <div class="cup-detail-card combat">
+                    <div class="cup-detail-header">
+                        <div class="cup-detail-icon"><i class="fas fa-crosshairs"></i></div>
+                        <h3>Combat Cup</h3>
+                    </div>
+                    <div class="cup-detail-content">
+                        <p>Bojová disciplína pro ty nejtvrdší.</p>
+                        <h4>Minihry:</h4>
+                        <ul>
+                            <li><i class="fas fa-users"></i> <strong>Team Deathmatch</strong> - Týmové souboje</li>
+                            <li><i class="fas fa-skull"></i> <strong>Deathmatch</strong> - Každý sám za sebe</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Skill Cup -->
+                <div class="cup-detail-card skill">
+                    <div class="cup-detail-header">
+                        <div class="cup-detail-icon"><i class="fas fa-star"></i></div>
+                        <h3>Skill Cup</h3>
+                    </div>
+                    <div class="cup-detail-content">
+                        <p>Disciplína pro ukázání speciálních dovedností.</p>
+                        <h4>Minihry:</h4>
+                        <ul>
+                            <li><i class="fas fa-fist-raised"></i> <strong>Face to Face</strong> - Souboje 1v1</li>
+                            <li><i class="fas fa-rocket"></i> <strong>RPG vs Cars</strong> - Přežij nebo znič</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rules -->
+    <section class="rules-section" id="rules">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-gavel"></i>
+                    Pravidla turnaje
+                </h2>
+            </div>
+
+            <div class="rules-grid">
+                <div class="rule-card">
+                    <div class="rule-icon"><i class="fas fa-user-check"></i></div>
+                    <h3>Fair Play</h3>
+                    <p>Žádné cheaty, exploity nebo neférové výhody. Hraj čestně!</p>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-icon"><i class="fas fa-clock"></i></div>
+                    <h3>Dochvilnost</h3>
+                    <p>Buď online včas. Pozdní příchod může znamenat diskvalifikaci.</p>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-icon"><i class="fas fa-comments"></i></div>
+                    <h3>Respekt</h3>
+                    <p>Respektuj ostatní hráče a organizátora. Toxické chování není tolerováno.</p>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-icon"><i class="fas fa-wifi"></i></div>
+                    <h3>Stabilní připojení</h3>
+                    <p>Zajisti si stabilní internetové připojení pro plynulou hru.</p>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-icon"><i class="fas fa-microphone"></i></div>
+                    <h3>Komunikace</h3>
+                    <p>Mikrofon není povinný, ale usnadňuje koordinaci.</p>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-icon"><i class="fas fa-balance-scale"></i></div>
+                    <h3>Rozhodnutí organizátora</h3>
+                    <p>Rozhodnutí organizátora je konečné ve všech sporných situacích.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prizes -->
+    <section class="prizes-section" id="prizes">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-coins"></i>
+                    Výhry
+                </h2>
+            </div>
+
+            <div class="prizes-showcase">
+                <div class="prize-category">
+                    <h3><i class="fas fa-medal"></i> Výhra za Cup (Top 3)</h3>
+                    <div class="prize-amount-large">$2,600,000</div>
+                    <p>Každý z Top 3 hráčů v Racing, Combat a Skill Cupu</p>
+                </div>
+                
+                <div class="prize-divider">
+                    <i class="fas fa-plus"></i>
+                </div>
+                
+                <div class="prize-category finale">
+                    <h3><i class="fas fa-crown"></i> Celkové vyhlášení (Top 3)</h3>
+                    <div class="prize-amount-large">$5,200,000</div>
+                    <p>Každý z Top 3 hráčů v celkovém hodnocení</p>
+                </div>
+            </div>
+
+            <div class="prize-note">
+                <i class="fas fa-info-circle"></i>
+                <p>Všechny výhry jsou vypláceny v GTA$ přímo ve hře organizátorem turnaje.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-question-circle"></i>
+                    Časté dotazy
+                </h2>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Jak se mohu přihlásit do turnaje?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Kontaktuj organizátora turnaje přes Discord nebo jiný komunikační kanál.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Musím se účastnit všech cupů?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ne, účast na jednotlivých cupech je dobrovolná. Ale pro celkové hodnocení je výhodné sbírat body ze všech disciplín.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Kdy probíhají turnaje?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Turnaje probíhají týdně. Přesné časy a dny jsou oznámeny předem.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Mohu hrát na PS5?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ano, ale musíš mít PS4 verzi GTA 5 Online, ne next-gen verzi, aby byli všichni hráči kompatibilní.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-bg"></div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-trophy"></i>
+                        <span>GTC</span>
+                    </div>
+                    <p>Grand Tournament Championship</p>
+                    <p class="footer-game">GTA 5 Online | PS4/PS5</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Navigace</h4>
+                    <ul>
+                        <li><a href="index.html">Domů</a></li>
+                        <li><a href="racing-cup.html">Racing Cup</a></li>
+                        <li><a href="combat-cup.html">Combat Cup</a></li>
+                        <li><a href="skill-cup.html">Skill Cup</a></li>
+                        <li><a href="finale.html">Finále</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Na této stránce</h4>
+                    <ul>
+                        <li><a href="#cups">Disciplíny</a></li>
+                        <li><a href="#rules">Pravidla</a></li>
+                        <li><a href="#prizes">Výhry</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Grand Tournament Championship. Neoficiální turnaj GTA 5 Online.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+  </html>
